@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button type="button" onclick="openWindow()">Open</button>
+	<script>
+		window.addEventListener("message", (event) => {
+			alert(event.data)
+		}, false);
+
+		function openWindow() {
+			var myWindow = window.open("http://localhost/window-opener/popup.html", "myWindow", "width=200, height=100");
+		}
+
+	</script>
+</body>
+</html>

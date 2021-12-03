@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="text">
+	<button type="button" onclick="submit()">Submit</button>
+
+
+	<script>
+		function submit() {
+			var textValue = document.getElementById("text").value
+			window.opener.postMessage(textValue, window.opener);
+			window.close();
+		}
+
+	</script>
+</body>
+</html>
